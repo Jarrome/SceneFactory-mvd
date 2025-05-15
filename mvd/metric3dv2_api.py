@@ -11,7 +11,7 @@ try:
 except:
     from mmengine import Config, DictAction
 current_path = os.path.dirname(os.path.abspath(__file__))
-metric3d_dir=current_path+'/thirdparty/Metric3D/'
+metric3d_dir=current_path+'/../thirdparty/Metric3D/'
 sys.path.append(metric3d_dir)
 from mono.model.monodepth_model import get_configured_monodepth_model
 from mono.utils.do_test import transform_test_data_scalecano

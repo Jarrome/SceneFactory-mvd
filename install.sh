@@ -20,4 +20,5 @@ cd ..
 # install ext
 python ext/__init__.py
 
-
+# install U2-mvd
+pip install -e .

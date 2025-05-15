@@ -16,19 +16,18 @@ from pyquaternion import Quaternion
 from depth_cov.core.NonstationaryGpModule import NonstationaryGpModule
 from depth_cov.utils.utils import sample_coords, normalize_coordinates
 
-
-current_path = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(current_path)
-from dkmv3_api import get_flow_api
+from .dkmv3_api import get_flow_api
 ### Comment the early release huggingface version of v2
 #from metric3d_api_hugface import get_mono_api
-from metric3dv2_api import get_mono_api
-
-
-from ext import remove_radius_outlier, estimate_normals, unproject_depth
-from plot import depth23D, plot_depth_as_pc
-
+from .metric3dv2_api import get_mono_api
+from .plot import depth23D, plot_depth_as_pc
 import droid_ipf
+
+
+
+current_path = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.dirname(current_path))
+from ext import remove_radius_outlier, estimate_normals, unproject_depth
 
 from time import time
 from icecream import ic
