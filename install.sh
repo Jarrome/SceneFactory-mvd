@@ -9,7 +9,7 @@ cd ../DepthCov/
 pip install -e . 
 
 
-cd../../
+cd ../../
 
 
 # install BA
